@@ -50,10 +50,14 @@ var testingArray3 = [3, 7, "hi", 10, 3, "hello", 4, "hi"]
 var testingArray4 = [7, "hi", 3, 1, "hi", 4, "hello", 4, 7]
 // Expected output: [ 3, 7, "hi", 10, "hello", 4, 1 ]
 
+//create a function that takes in two arrays as an arguement
 const moreFunWithArraysNot = (array1, array2) => {
+  //create a new varibale that will join the two arrays
   let newArray = array1.concat(array2)
+  //filter through the combined array with the value and index as arguements
   return newArray.filter((value, index) => {
-    return newArray.indexOf(value) === index
+    //and exclude the value is it is a duplicate by comparing the index of value and index
+      return newArray.indexOf(value) === index
   })
 }
 console.log(moreFunWithArraysNot(testingArray3, testingArray4))
